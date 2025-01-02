@@ -20,6 +20,17 @@
     </nav>
 </head>
 
+
+
+
+
+
+
+
+
+
+
+
   <body>
     <main>
 		<div class="top-section">
@@ -102,9 +113,82 @@
 		</div>
     </main>
     
+	
+	
+	
+	
+	
+	
+	
+	
     <footer>
         <p>&copy; 2024 ZarkosCypher. All rights reserved.</p>
-    </footer>
+		<p class="xmr-address"><strong>Support Me With XMR! Monero Donation Address:</strong> 83rBzQSTLDh8Bq248T2EizKfq4TPhqhFeJ96EUUB3uZQ1NUci2mfGhZg7mWdCWLtwoQ5QyUPzzNVV9CWNQrfszvp1TEXi64</p>
+		<button id="donate-button" onclick="copyXmrAddress()"><img src="assets/img/XMRdonateAddress.png" alt="XMR QR Code" style="width: 150px; height: 150px;"></button>
+	</footer>
+	
+	
+	<script>
+			// Copy to Clipboard and Show Tooltip
+			document.getElementById('donate-button').addEventListener('click', (event) => {
+			const xmrAddress = "83rBzQSTLDh8Bq248T2EizKfq4TPhqhFeJ96EUUB3uZQ1NUci2mfGhZg7mWdCWLtwoQ5QyUPzzNVV9CWNQrfszvp1TEXi64";
+
+			// Copy the address to clipboard
+			navigator.clipboard.writeText(xmrAddress).then(() => {
+				// Create and show tooltip
+				showTooltip(event, "Copied to clipboard!");
+			}).catch(err => {
+				console.error("Failed to copy address:", err);
+			});
+		});
+
+		function showTooltip(event, message) {
+			// Create the tooltip element
+			const tooltip = document.createElement('div');
+			tooltip.className = 'tooltip';
+			tooltip.textContent = message;
+
+			// Position the tooltip near the mouse click
+			document.body.appendChild(tooltip);
+			const tooltipWidth = 100; // Approximate width of the tooltip
+			tooltip.style.left = `${event.pageX - tooltipWidth / 2}px`; // Center on click
+			tooltip.style.top = `${event.pageY - 30}px`; // Slightly above the cursor
+
+			// Show the tooltip
+			requestAnimationFrame(() => {
+				tooltip.style.opacity = 1;
+			});
+
+			// Remove the tooltip after 2 seconds
+			setTimeout(() => {
+				tooltip.style.opacity = 0;
+				tooltip.addEventListener('transitionend', () => tooltip.remove());
+			}, 2000);
+		}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <button id="back-to-top">↑ Top</button>
     
 	

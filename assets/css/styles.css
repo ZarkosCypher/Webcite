@@ -134,6 +134,67 @@ footer {
     font-size: 1.1em;
 }
 
+footer p {
+	margin: 5px 0;
+}
+
+footer img {
+	margin-top: 10px;
+	border: 2px solid #FFF;
+	border-radius: 5px;
+}
+
+.xmr-address {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	margin: 10px auto;
+	max-widtch: 90%;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .xmr-address {
+        font-size: 0.9em; /* Slightly reduce font size on smaller screens */
+        max-width: 100%; /* Allow full-width usage */
+    }
+}
+
+
+
+/* Button */
+button {
+    outline: none; /* Removes the default focus outline */
+    border: none;  /* Optional: Removes the border */
+    padding: 1px 10px;
+    background-color: #333; /* Button background */
+    color: white; /* Text color */
+    cursor: pointer;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1em;
+}
+
+button:focus {
+    outline: none; /* Ensure no outline when the button is focused */
+}
+
+button:hover {
+    background-color: #555; /* Optional: Change color on hover */
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: absolute;
+    background-color: #333; /* Dark background for tooltip */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    pointer-events: none; /* Prevent interactions */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in/out */
+    z-index: 1000;
+}
+
 
 
 
